@@ -55,6 +55,34 @@
 	#main p a:visited {color:#0000EF;}
 	/*  background image: http://i.imgur.com/tOhSKim.png
 		header image: http://i.imgur.com/jGmHpjE.png */
+		
+		/*specific styles*/
+		div.background {
+    width: 800px;
+    height:600px;
+    background: url(randombullshit.jpg);
+    border: 2px solid black;
+}
+
+div.transbox {
+    width: 400px;
+    height: 180px;
+    margin: 30px 50px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    
+}
+div.transbox:rollover
+{
+  opacity: 0.6;
+}
+
+div.transbox p {
+    margin: 30px 40px;
+    font-weight: bold;
+    color: #000000;
+}
 	</style>
 </head>
 <body>
@@ -73,7 +101,11 @@
    			</div>
 	</div>
 	<div id="main">
-	<p>PUT CONTENT HERE YOU PEOPLES! </p>
+	<div class="background">
+  <div class="transbox">
+    <p>Look at our sexiness.</p>
+  </div>
+</div>
 	</div>
 <div id="footer">
 	
