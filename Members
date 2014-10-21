@@ -40,10 +40,10 @@
     border-radius: 2px; 
     text-align: center;
     }
-    #container a {
+    a {
       color:#DDD;
     }
-    #container a:hover{
+    a:hover{
       color:#25282B;
     }
 	body{
