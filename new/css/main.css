@@ -6,6 +6,11 @@
 	/* font-weight: 400; */
 }
 
+::selection, ::-moz-selection {
+	background-color: #06C;
+	color: #FFF;
+}
+
 body {
 	background-color: #EEE;
 }
