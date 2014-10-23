@@ -11,3 +11,7 @@ Don't see your name on the members page? That either means it's not done or your
 3. Find your own username, and change :lock: Private to :unlock: Public.
 
 Now you should appear on the members page.
+
+### How does this work?
+
+The members page is using the [Github API](https://developer.github.com/v3/), which lets applications access data from Github's database. To respect people's privacy, only members which have indicated that their membership in an organization is public will be listed.
