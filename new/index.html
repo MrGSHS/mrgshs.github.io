@@ -24,7 +24,30 @@
                 }
 
                 .block {
+                    padding: 120px 5%;
+                    font-size: 18pt;
+                }
 
+                .block h1 {
+                    font-size: 42pt;
+                }
+
+                .block:nth-child(even) {
+                    background-image: url(img/club-blur.jpg);
+                    background-size: 100%;
+                    background-attachment: fixed;
+                    background-position: -50%;
+                    color: #FFF;
+
+                    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+
+                .block:nth-child(odd) {
+                    background-color: #FFF;
+                }
+
+                #footer {
+                    padding: 30px 5%;
                 }
                 </style>
                 <div id="jumbotron">
@@ -32,8 +55,20 @@
                     <h1 style="text-align: center; font-size: 56pt;">Computer Science Club</h1>
                 </div>
 
-                <div class="block">
-                    <h1></h1>
+                <div id="blocks">
+                    <div class="block">
+                        <h1>We're here to make a difference</h1>
+                        <p>The purpose of this club is to introduce new students to the world of computer science.</p>
+                    </div>
+                
+                    <div class="block">
+                        <h1>Some other filler title</h1>
+                        <p>And some more filler text.</p>
+                    </div>
+                </div>
+
+                <div id="footer">
+                    Made with <span class="fa fa-heart"></span> by Stevenson High School Computer Science Club.
                 </div>
             </div>
             <div id="background">
