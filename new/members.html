@@ -24,16 +24,29 @@
                     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
                 }
 
+                .card a:hover {
+                    text-decoration: none;
+                }
+
                 .card img.pic {
-                    width: 150px;
-                    height: 150px;
-                    border-radius: 150px;
-                    -moz-border-radius: 150px;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 100px;
+                    -moz-border-radius: 100px;
                     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+                }
+
+                .card span.username {
+                    color: #999;
+                    font-size: 12pt;
                 }
 
                 .card .basic-info {
                     padding: 15px;
+                }
+
+                .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+                    margin: 0;
                 }
                 </style>
                 <h1 style="text-align: center; font-size: 56pt;">Members</h1>
@@ -86,14 +99,27 @@
                             var tr1 = document.createElement("tr1");
 
                             var pic = document.createElement("td");
-                            pic.innerHTML = "<img class='pic' src='" + user.avatar_url + "' />";
+                            pic.style.verticalAlign = "middle";
+                            pic.innerHTML = "<a href='http://github.com/" + user.login + "' target='_blank'><img class='pic' src='" + user.avatar_url + "' /></a>";
                             tr1.appendChild(pic);
 
                             var basic = document.createElement("td");
                             basic.className = "basic-info";
                             basic.style.verticalAlign = "top";
-                            basic.innerHTML += "<h1 class='name'>" + user.name + "<h1>";
-                            basic.innerHTML += "<small class='username'>" + user.login + "</h1>";
+                            if (user.name) {
+                                basic.innerHTML += "<a href='http://github.com/" + user.login + "' target='_blank'>"
+                                    + "<h1 class='name'>" + user.name + "<h1>"
+                                    + "<span class='username'>" + user.login + "</span>"
+                                    + "</a>";
+                            } else {
+                                basic.innerHTML += "<a href='http://github.com/" + user.login + "' target='_blank'>"
+                                    + "<h1 class='name'>" + user.login + "<h1>";
+                                    + "</a>";
+                            }
+
+                            if (user.blog) {
+                                basic.innerHTML += "<p><span class='octicon octicon-link'></span> <a href='" + user.blog + "' target='_blank'>" + user.blog + "</a></p>";
+                            }
                             tr1.appendChild(basic);
 
                             table.appendChild(tr1);
