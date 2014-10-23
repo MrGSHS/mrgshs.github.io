@@ -21,7 +21,18 @@
                     margin-bottom: 15px;
                     border-radius: 8px;
                     -moz-border-radius: 8px;
-                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25),
+                        0px 2px 10px rgba(0, 0, 0, 0);
+                    transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                    -o-transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                    -ms-transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                    -moz-transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                    -webkit-transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                }
+
+                .card:hover {
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25),
+                        0px 2px 10px rgba(0, 0, 0, 0.5);
                 }
 
                 .card a {
