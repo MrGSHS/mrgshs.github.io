@@ -45,9 +45,28 @@ body {
 
 a {
 	text-decoration: none;
-	color: #000;
+	color: #06C;
+	outline: none;
+	transition: all .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-o-transition: all .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-ms-transition: all .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-moz-transition: all .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-webkit-transition: all .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	transform: perspective(500px) translateZ(0px);
+	-o-transform: perspective(500px) translateZ(0px);
+	-ms-transform: perspective(500px) translateZ(0px);
+	-moz-transform: perspective(500px) translateZ(0px);
+	-webkit-transform: perspective(500px) translateZ(0px);
 }
 
 a:hover {
-	text-decoration: underline;
+	color: #09C;
+}
+
+a:active {
+	transform: perspective(500px) translateZ(-20px);
+	-o-transform: perspective(500px) translateZ(-20px);
+	-ms-transform: perspective(500px) translateZ(-20px);
+	-moz-transform: perspective(500px) translateZ(-20px);
+	-webkit-transform: perspective(500px) translateZ(-20px);
 }
