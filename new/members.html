@@ -20,9 +20,11 @@
                 dataType: "json",
                 type: "get",
                 success: function(users) {
+                    console.dir(users);
                     var data = [];
                     for(var i=0; i<users.length; i++) {
                         $(document).queue("retrieve_users", function(n) {
+                            console.log(i);
                             $.ajax({
                                 url: "https://api.github.com/users/" + users[i].login,
                                 dataType: "json",
