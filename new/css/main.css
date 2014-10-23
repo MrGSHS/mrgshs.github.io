@@ -15,8 +15,10 @@
     background: #06C;
     color: #FFF;
 }
+
 body {
 	background-color: #EEE;
+	overflow-y: scroll;
 }
 
 #navigation-bar {
