@@ -34,7 +34,10 @@
                             });
                         });
                     }
-                    console.dir(data);
+                    $(document).queue("retrieve_users", function() {
+                        console.dir(data);
+                    });
+                    $(document).dequeue("retrieve_users");
                 }
             });
         </script>
