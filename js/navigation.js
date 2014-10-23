@@ -5,6 +5,8 @@ var Navigation = {
 		Navigation.ImportElement.href = "include/navigation.html";
 		Navigation.ImportElement.onload = function(e) {
 			// cb
+			console.log("navigation loaded!");
+			console.dir(e);
 		};
 		Navigation.ImportElement.onerror = function(e) {
 			// something went wrong
