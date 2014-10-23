@@ -50,8 +50,8 @@
                 }
                 </style>
                 <h1 style="text-align: center; font-size: 56pt;">Members</h1>
-                <div id="members">
-                </div>
+                <div id="loading"><center><p>Loading...</p><p><img src="img/ajax-loader.gif" /></center></div>
+                <div id="members" style="display:none;"></div>
             </div>
             <div id="background">
             </div>
@@ -128,6 +128,10 @@
                             document.getElementById("members").appendChild(card);
                             console.dir(card);
                         }
+
+                        $("#loading").slideUp("fast", "swing", function() {
+                            $("#members").slideDown("fast", "swing");
+                        });
                     });
                     $(document).dequeue("retrieve_users");
                 }
