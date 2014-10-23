@@ -1,3 +1,5 @@
 var Navigation = {
-    
+    Init: function() {
+    	
+    },
 };
