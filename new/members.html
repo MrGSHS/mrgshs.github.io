@@ -19,8 +19,21 @@
                 url: "https://api.github.com/orgs/shscsclub/members?filter=all",
                 dataType: "json",
                 type: "get",
-                success: function(content) {
-                    console.dir(content);
+                success: function(users) {
+                    var data = [];
+                    for(var i=0; i<users.length; i++) {
+                        $(document).queue("retrieve_users", function(n) {
+                            $.ajax({
+                                "https://api.github.com/users/" + users[i].login,
+                                dataType: "json",
+                                type: "get",
+                                success: function(datum) {
+                                    data.push(datum);
+                                    n();
+                                }
+                            });
+                        });
+                    }
                 }
             });
         </script>
