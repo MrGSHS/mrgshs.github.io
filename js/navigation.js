@@ -1,18 +1,8 @@
 var Navigation = {
     Init: function() {
-		Navigation.ImportElement = document.createElement("link");
-		Navigation.ImportElement.rel = "import";
-		Navigation.ImportElement.href = "include/navigation.html";
-		Navigation.ImportElement.onload = function(e) {
-			// cb
-			console.log("navigation loaded!");
-			console.dir(e);
-		};
-		Navigation.ImportElement.onerror = function(e) {
-			// something went wrong
-			console.dir(e);
-		};
-		document.head.appendChild(Navigation.ImportElement);
+		Navigation.ImportElement = document.querySelector("link#navigation-import[rel=import]");
+		Navigation.Content = Navigation.ImportElement.import;
+		console.dir(Navigation.Content);
     },
 };
 
