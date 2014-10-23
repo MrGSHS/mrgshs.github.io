@@ -16,11 +16,15 @@
 		}
 
 		#navigation-bar .btn {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+
 			color: #FFF;
 			text-decoration: none;
+			padding: 5px 15px;
 		}
 
-		#navigation-table tr td.right {
+		#navigation-table tr .right {
 			float: right;
 		}
 	</style>
@@ -28,7 +32,9 @@
 		<table id="navigation-table">
 			<tr>
 				<td><a href="javascript:void(0);" class="btn">Computer Science Club</a></td>
-				<td class="right"><a href="javascript:void(0);" class="btn">About</a></td>
+				<span class="right">
+					<td><a href="javascript:void(0);" class="btn">About</a></td>
+				</div>
 			</tr>
 		</table>
 	</div>
