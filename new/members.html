@@ -23,18 +23,20 @@
                     console.dir(users);
                     var data = [];
                     for(var i=0; i<users.length; i++) {
-                        $(document).queue("retrieve_users", function(n) {
-                            console.log(i);
-                            $.ajax({
-                                url: "https://api.github.com/users/" + users[i].login,
-                                dataType: "json",
-                                type: "get",
-                                success: function(datum) {
-                                    data.push(datum);
-                                    n();
-                                }
+                        (function(i) {
+                            $(document).queue("retrieve_users", function(n) {
+                                console.log(i);
+                                $.ajax({
+                                    url: "https://api.github.com/users/" + users[i].login,
+                                    dataType: "json",
+                                    type: "get",
+                                    success: function(datum) {
+                                        data.push(datum);
+                                        n();
+                                    }
+                                });
                             });
-                        });
+                        })(i);
                     }
                     $(document).queue("retrieve_users", function() {
                         console.dir(data);
