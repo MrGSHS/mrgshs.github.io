@@ -1,26 +1,17 @@
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+# SHS Computer Science Club
 
+This is the main website for the Stevenson High School Computer Science Club.
 
-Hi there! Welcome to Cloud9 IDE!
+## Members Page
 
-To get you started, we included a small hello world application.
+Don't see your name on the members page? That either means it's not done or your membership in this organization isn't public. If you want to start appearing on the members page, perform the following steps and wait a few minutes for magic to happen.
 
-1) Open the hello-world.html file
+1. Go to the [SHS CS Club Organization](https://github.com/SHSCSclub) on Github.
+2. Click the [People](https://github.com/orgs/SHSCSclub/people) link to the right side.
+3. Find your own username, and change :lock: Private to :unlock: Public.
 
-2) Click on the Preview button to open a live preview pane
+Now you should appear on the members page.
 
-3) Make some changes to the file, save, watch the preview, and have fun!
+### How does this work?
 
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+The members page is using the [Github API](https://developer.github.com/v3/), which lets applications access data from Github's database. To respect people's privacy, only members which have indicated that their membership in an organization is public will be listed.
