@@ -8,6 +8,10 @@ body {
 	background-color: #EEE;
 }
 
+#navigation-bar {
+	z-index: 150;
+}
+
 #wrapper > #background {
 	width: 60%;
 	height: 100%;
