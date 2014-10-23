@@ -14,5 +14,15 @@
         </div>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/navigation.js"></script>
+        <script type="text/javascript">
+            $.ajax({
+                url: "https://api.github.com/orgs/shscsclub/members?filter=all",
+                dataType: "json",
+                type: "get",
+                success: function(content) {
+                    console.dir(content);
+                }
+            });
+        </script>
     </body>
 </html>
