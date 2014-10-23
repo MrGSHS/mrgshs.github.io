@@ -25,9 +25,10 @@
 
                 #jumbotron, .block:nth-child(even) {
                     background-image: url(img/club-blur.jpg);
-                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
                     background-attachment: fixed;
-                    background-position: 0 -50%;
+                    background-position: 50% 0%;
                     color: #FFF;
                 }
 
@@ -79,10 +80,12 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/navigation.js"></script>
         <script>
+            /*
             $(document).scroll(function(e) {
-                var percent = $(document).scrollTop() * 100 / $(document).height() - 50;
+                var percent = $(document).scrollTop() * 100 / $(document).height();
                 $("#jumbotron, .block:nth-child(even)").css("background-position", "0 " + percent + "%");
             });
+*/
         </script>
     </body>
 </html>
