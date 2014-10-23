@@ -7,7 +7,38 @@
     <body>
         <div id="wrapper">
             <div id="container">
+                <style>
+                * {
+                    box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                }
+
+                .card {
+                    width: 80%;
+                    margin: auto;
+                    background-color: #EEE;
+                    padding: 15px;
+                    margin-bottom: 15px;
+                    border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+                }
+
+                .card img.pic {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 150px;
+                    -moz-border-radius: 150px;
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+                }
+
+                .card .basic-info {
+                    padding: 15px;
+                }
+                </style>
                 <h1 style="text-align: center; font-size: 56pt;">Members</h1>
+                <div id="members">
+                </div>
             </div>
             <div id="background">
             </div>
@@ -15,21 +46,27 @@
         <script type="text/javascript" src="js/j.js"></script>
         <script type="text/javascript" src="js/navigation.js"></script>
         <script type="text/javascript">
+            var token = "6df7e7237699dd9b9d50c9c227468bc88494d247";
             $.ajax({
                 url: "https://api.github.com/orgs/shscsclub/members?filter=all",
                 dataType: "json",
                 type: "get",
+                headers: {
+                    Authorization: "token " + token,
+                },
                 success: function(users) {
                     console.dir(users);
                     var data = [];
                     for(var i=0; i<users.length; i++) {
                         (function(i) {
                             $(document).queue("retrieve_users", function(n) {
-                                console.log(i);
                                 $.ajax({
                                     url: "https://api.github.com/users/" + users[i].login,
                                     dataType: "json",
                                     type: "get",
+                                    headers: {
+                                        Authorization: "token " + token,
+                                    },
                                     success: function(datum) {
                                         data.push(datum);
                                         n();
@@ -40,6 +77,31 @@
                     }
                     $(document).queue("retrieve_users", function() {
                         console.dir(data);
+                        for(var i=0; i<data.length; i++) {
+                            var user = data[i];
+                            var card = document.createElement("div");
+                            card.className = "card";
+
+                            var table = document.createElement("table");
+                            var tr1 = document.createElement("tr1");
+
+                            var pic = document.createElement("td");
+                            pic.innerHTML = "<img class='pic' src='" + user.avatar_url + "' />";
+                            tr1.appendChild(pic);
+
+                            var basic = document.createElement("td");
+                            basic.className = "basic-info";
+                            basic.style.verticalAlign = "top";
+                            basic.innerHTML += "<h1 class='name'>" + user.name + "<h1>";
+                            basic.innerHTML += "<small class='username'>" + user.login + "</h1>";
+                            tr1.appendChild(basic);
+
+                            table.appendChild(tr1);
+                            card.appendChild(table);
+
+                            document.getElementById("members").appendChild(card);
+                            console.dir(card);
+                        }
                     });
                     $(document).dequeue("retrieve_users");
                 }
