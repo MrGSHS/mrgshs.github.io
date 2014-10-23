@@ -1,19 +1,72 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Computer Science Club @ Stevenson High School</title>
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="import" id="navigation-import" href="include/navigation.html" />
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="container">
-                <p style="text-align: center; font-size: 21pt;">Stevenson High School</p>
-                <h1 style="text-align: center; font-size: 56pt;">Computer Science Club</h1>
-            </div>
-            <div id="background">
-            </div>
-        </div>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/navigation.js"></script>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <title>Computer Science Club</title>
+  <style type="text/css">
+    li {
+      float:left;
+      width:120px;
+      margin-left:20px;
+      background-color: #666;
+      text-align:center;
+      border: 5px solid #444;
+      border-radius: 4px;
+    }
+    li:hover {
+      background-color: #AAA;
+      text-align: center;
+    }
+    ul {
+      list-style-type:none;
+    }
+    #main {
+      margin: 0 auto; 
+    }
+    #container {
+      overflow: hidden;
+      margin: 0 auto;
+      height: 50%;
+    }
+    #content {
+      background-color: white;
+      border: 5px solid #444;
+      border-radius: 2px; 
+      text-align: center;
+    }
+    body{
+      background-color:#25282B;
+      width:800px;
+      margin: 0 auto;
+      font-family: Ubuntu, sans-serif;
+    }
+    a {
+      color:#DDD;
+    }
+    a:hover{
+      color:#25282B;
+    }
+    body img {
+      margin-left: auto;
+      margin-right: auto;
+    }  
+  </style>
+</head>
+<body>
+
+<a href="index.html"><img src="http://puu.sh/bC8Jn/f89355ecd5.svg" width=800px/>
+</a>
+
+<div id="main">
+  <div id="container">
+    <ul>
+      <a href="about.html"><li style="margin-left:0px;">About</li></a>
+      <a href="members.html"><li>Members</li></a>
+      <a href="proj.html"><li>Projects</li></a>
+      <a href="ctf.html"><li>CTFs</li></a>
+      <a href="faq.html"><li>FAQ</li></a>
+    </ul>
+  </div>
+</div>  
+</body>
 </html>

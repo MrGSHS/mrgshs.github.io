@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>FAQ - Computer Science Club @ Stevenson High School</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="import" id="navigation-import" href="include/navigation.html" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="container">
+                <style>
+                    #faq-table {
+                        width: 80%;
+                        margin: auto;
+                    }
+
+                    #faq-table tr {
+                        display: block;
+                    }
+
+                    #faq-table tr:not(.first):before {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        display: block;
+                        /* border: 1px solid #F00; */
+                        height: 10px;
+                        content: " ";
+                        background: radial-gradient(50% 100% at 50% 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+                    }
+
+                    #faq-table td {
+                        padding: 15px;
+                    }
+
+                    #faq-table .circle-icon {
+                        background-color: #000;
+                        width: 60px;
+                        height: 60px;
+                        color: #FFF;
+                        position: relative;
+                        text-align: center;
+                        border-radius: 60px;
+                        -moz-border-radius: 60px;
+                        -webkit-border-radius: 60px;
+                    }
+
+                    #faq-table .circle-icon .mega-octicon {
+                        font-size: 30px;
+                        position: absolute;
+                        top: 15px;
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                    }
+                </style>
+                <h1 style="text-align: center; font-size: 56pt;">Frequently Asked Questions</h1>
+                <table id="faq-table">
+                    <tr class="first">
+                        <td>
+                            <div class="circle-icon">
+                                <span class="mega-octicon octicon-check"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <h1>Where is Computer Science Club held?</h1>
+                            <h3>In the Link Labs.</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="circle-icon">
+                                <span class="mega-octicon octicon-check"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <h1>When do we meet?</h1>
+                            <h3>Every Tuesday after school from 3:30pm to 4:55pm.</h3>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="background">
+            </div>
+        </div>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/navigation.js"></script>
+    </body>
+</html>

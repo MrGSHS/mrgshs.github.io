@@ -1,87 +1,106 @@
 <html>
-    <head>
-        <title>FAQ - Computer Science Club @ Stevenson High School</title>
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="import" id="navigation-import" href="include/navigation.html" />
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="container">
-                <style>
-                    #faq-table {
-                        width: 80%;
-                        margin: auto;
-                    }
-
-                    #faq-table tr {
-                        display: block;
-                    }
-
-                    #faq-table tr:not(.first):before {
-                        margin-top: 10px;
-                        margin-bottom: 10px;
-                        display: block;
-                        /* border: 1px solid #F00; */
-                        height: 10px;
-                        content: " ";
-                        background: radial-gradient(50% 100% at 50% 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-                    }
-
-                    #faq-table td {
-                        padding: 15px;
-                    }
-
-                    #faq-table .circle-icon {
-                        background-color: #000;
-                        width: 60px;
-                        height: 60px;
-                        color: #FFF;
-                        position: relative;
-                        text-align: center;
-                        border-radius: 60px;
-                        -moz-border-radius: 60px;
-                        -webkit-border-radius: 60px;
-                    }
-
-                    #faq-table .circle-icon .mega-octicon {
-                        font-size: 30px;
-                        position: absolute;
-                        top: 15px;
-                        display: block;
-                        width: 100%;
-                        text-align: center;
-                    }
-                </style>
-                <h1 style="text-align: center; font-size: 56pt;">Frequently Asked Questions</h1>
-                <table id="faq-table">
-                    <tr class="first">
-                        <td>
-                            <div class="circle-icon">
-                                <span class="mega-octicon octicon-check"></span>
-                            </div>
-                        </td>
-                        <td>
-                            <h1>Where is Computer Science Club held?</h1>
-                            <h3>In the Link Labs.</h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="circle-icon">
-                                <span class="mega-octicon octicon-check"></span>
-                            </div>
-                        </td>
-                        <td>
-                            <h1>When do we meet?</h1>
-                            <h3>Every Tuesday after school from 3:30pm to 4:55pm.</h3>
-                        </td>
-                    </tr>
-                </table>
+<head>
+<title>FAQ</title>
+<style type="text/css">
+            li{
+      float:left;
+      width:120px;
+      margin-left:20px;
+      background-color: #666;
+      text-align:center;
+      border: 5px solid #444;
+      border-radius: 4px;
+    }
+        li:hover
+    {
+      background-color: #AAA;
+      text-align: center;
+    }   ul
+    {
+      list-style-type:none;
+    }
+    #main
+    {
+    margin: 0 auto; 
+    }
+    #container
+    {
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto; 
+      /*height: 50%;*/
+    }
+    #content {
+    background-color: white;
+    border: 5px solid #444;
+    border-radius: 2px; 
+    text-align: center;
+    }
+    body{
+        background-image:url('http://i.imgur.com/CmUiqXS.png'); 
+        width:800px;
+        margin: 0 auto;
+        font-family: Ubuntu, sans-serif;
+        
+    }
+    a {
+      color:#DDD;
+    }
+    a:hover{
+      color:#25282B;
+    }
+    #main p a:visited {color:#0000EF;}
+    /*  background image: http://i.imgur.com/tOhSKim.png
+        header image: http://i.imgur.com/jGmHpjE.png */
+    </style>
+</head>
+<body>
+    <div id="header">
+        <a href="index.html">
+            <img src="http://i.imgur.com/jGmHpjE.png" width = 800px />
+        </a> 
+              <div id="container">
+                <ul>
+                    <a href="about.html"><li style="margin-left:0px;">About</li></a>
+                    <a href="members.html"><li>Members</li></a>
+                    <a href="proj.html"><li>Projects</li></a>
+                    <a href="ctf.html"><li>CTFs</li></a>
+                    <a href="faq.html"><li>FAQ</li></a>
+                 </ul>
             </div>
-            <div id="background">
-            </div>
-        </div>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/navigation.js"></script>
-    </body>
+    </div>
+<p><b>Question:</b>
+    Where is it?
+<br>
+    <b>Answer:</b>
+    In the Link Labs.
+</p><hr/>
+<p><b>Question:</b>
+    When do we meet?
+  <br>
+    <b>Answer:</b>
+    Tuesdays after school from 3:40 to 4:55pm
+</p><hr/>
+<p>
+    <b>Question:</b>
+    What do we do?
+ <br>
+    <b>Answer:</b>
+    We participate in competitions, such as CTFs, and collaborate on projects.
+</p><hr/> 
+<p>
+    <b>Question:</b>
+    Do I need experience?
+<br>
+    <b>Answer:</b>
+    No, this is a club meant to help new programmers learn what it means to program.
+</p><hr/>  
+<p>
+    <b>Question:</b>
+    Is it the most fun thing in the world?
+<br>
+    <b>Answer:</b>
+    Possibly.
+</p>
+</body>
 </html>
