@@ -1,72 +1,91 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Computer Science Club</title>
-  <style type="text/css">
-    li {
-      float:left;
-      width:120px;
-      margin-left:20px;
-      background-color: #666;
-      text-align:center;
-      border: 5px solid #444;
-      border-radius: 4px;
-    }
-    li:hover {
-      background-color: #AAA;
-      text-align: center;
-    }
-    ul {
-      list-style-type:none;
-    }
-    #main {
-      margin: 0 auto; 
-    }
-    #container {
-      overflow: hidden;
-      margin: 0 auto;
-      height: 50%;
-    }
-    #content {
-      background-color: white;
-      border: 5px solid #444;
-      border-radius: 2px; 
-      text-align: center;
-    }
-    body{
-      background-color:#25282B;
-      width:800px;
-      margin: 0 auto;
-      font-family: Ubuntu, sans-serif;
-    }
-    a {
-      color:#DDD;
-    }
-    a:hover{
-      color:#25282B;
-    }
-    body img {
-      margin-left: auto;
-      margin-right: auto;
-    }  
-  </style>
-</head>
-<body>
+    <head>
+        <!-- 
 
-<a href="index.html"><img src="http://puu.sh/bC8Jn/f89355ecd5.svg" width=800px/>
-</a>
+        Site design by Michael Zhang.
 
-<div id="main">
-  <div id="container">
-    <ul>
-      <a href="about.html"><li style="margin-left:0px;">About</li></a>
-      <a href="members.html"><li>Members</li></a>
-      <a href="proj.html"><li>Projects</li></a>
-      <a href="ctf.html"><li>CTFs</li></a>
-      <a href="faq.html"><li>FAQ</li></a>
-    </ul>
-  </div>
-</div>  
-</body>
+        -->
+
+        <title>Computer Science Club @ Stevenson High School</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" href="img/logo.ico" />
+        <link rel="import" id="navigation-import" href="include/navigation.html" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="container" class="unpadded">
+                <style>
+                #jumbotron {
+                    padding-top: 300px;
+                    padding-bottom: 240px;
+                    width: 100%;
+
+                    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+
+                #jumbotron, .block:nth-child(even) {
+                    background-image: url(img/club-blur.jpg);
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-attachment: fixed;
+                    background-position: 50% 0%;
+                    color: #FFF;
+                }
+
+                .block {
+                    padding: 120px 5%;
+                    font-size: 18pt;
+                }
+
+                .block h1 {
+                    font-size: 42pt;
+                }
+
+                .block:nth-child(even) {
+                    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+
+                .block:nth-child(odd) {
+                    background-color: #FFF;
+                }
+
+                #footer {
+                    padding: 30px 5%;
+                }
+                </style>
+                <div id="jumbotron">
+                    <p style="text-align: center; font-size: 21pt;">Stevenson High School</p>
+                    <h1 style="text-align: center; font-size: 56pt;">Computer Science Club</h1>
+                </div>
+
+                <div id="blocks">
+                    <div class="block">
+                        <h1>We're here to make a difference</h1>
+                        <p>The purpose of this club is to introduce new students to the world of computer science.</p>
+                    </div>
+                
+                    <div class="block">
+                        <h1>Some other filler title</h1>
+                        <p>And some more filler text.</p>
+                    </div>
+                </div>
+
+                <div id="footer">
+                    Made with <span class="fa fa-heart" style="color: #C00;"></span> by Stevenson High School Computer Science Club. Site design by Michael Zhang.
+                </div>
+            </div>
+            <div id="background">
+            </div>
+        </div>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/navigation.js"></script>
+        <script>
+            /*
+            $(document).scroll(function(e) {
+                var percent = $(document).scrollTop() * 100 / $(document).height();
+                $("#jumbotron, .block:nth-child(even)").css("background-position", "0 " + percent + "%");
+            });
+*/
+        </script>
+    </body>
 </html>

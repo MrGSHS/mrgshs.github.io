@@ -1,115 +1,154 @@
-<!DOCTYPE html>
-<head>
-	<title>Members</title>
-	<meta charset="utf-8" />
-	<meta name="description" content="Computer Science Club"/>
-	<meta name="author" content="The awesome people" />
-	<style type="text/css">
-	#container	li{
-      float:left;
-      width:120px;
-      margin-left:20px;
-      background-color: #666;
-      text-align:center;
-      border: 5px solid #444;
-      border-radius: 4px;
-    }
-    #container	li:hover
-    {
-      background-color: #AAA;
-      text-align: center;
-    }
-    #container	ul
-    {
-      list-style-type:none;
-    }
-    #main
-    {
-    margin: 0 auto; 
-    }
-    #container
-    {
-      overflow: hidden;
-      margin-left: auto;
-      margin-right: auto; 
-      height: 50%;
-    }
-    #content {
-    background-color: white;
-    border: 5px solid #444;
-    border-radius: 2px; 
-    text-align: center;
-    }
-    a {
-      color:#DDD;
-    }
-    a:hover{
-      color:#25282B;
-    }
-	body{
-		background-image:url('http://i.imgur.com/CmUiqXS.png');
-		width:800px;
-		margin: 0 auto;
-		font-family: Ubuntu, sans-serif;
-	}
-	#main p a:visited {color:#0000EF;}
-	/*  background image: http://i.imgur.com/tOhSKim.png
-		header image: http://i.imgur.com/jGmHpjE.png */
-		
-		/*specific styles*/
-		div.background {
-    width: 800px;
-    height:600px;
-    background: url(randombullshit.jpg);
-    border: 2px solid black;
-}
+<html>
+    <head>
+        <title>Members - Computer Science Club @ Stevenson High School</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" href="img/logo.ico" />
+        <link rel="import" id="navigation-import" href="include/navigation.html" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="container">
+                <style>
+                * {
+                    box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                }
 
-div.transbox {
-    width: 600px;
-    height: 400px;
-    margin: 100px;
-    background-color: #ffffff;
-    border: 1px solid black;
-    opacity: 0.6;
-    
-}
-div.transbox:hover
-{
-  opacity: 0;
-}
+                .card {
+                    margin: auto;
+                    background-color: #EEE;
+                    padding: 15px;
+                    margin-bottom: 15px;
+                    border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25),
+                        0px 2px 10px rgba(0, 0, 0, 0);
+                    transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                    -o-transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                    -ms-transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                    -moz-transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                    -webkit-transition: all .6s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                }
 
-div.transbox p {
-    margin: 30px 40px;
-    text-align:center;
-    font-weight: bold;
-    color: #000000;
-    font-size:3em;
-}
-	</style>
-</head>
-<body>
-	<div id="header">
-		<a href="index.html">
-			<img src="http://i.imgur.com/jGmHpjE.png" width = 800px />
-		</a>
-			  <div id="container">
-    			<ul>
-      				<a href="about.html"><li style="margin-left:0px;">About</li></a>
-				    <a href="members.html"><li>Members</li></a>
-				    <a href="proj.html"><li>Projects</li></a>
-				    <a href="ctf.html"><li>CTFs</li></a>
-			  	    <a href="faq.html"><li>FAQ</li></a>
-   				 </ul>
-   			</div>
-	</div>
-	<div id="main">
-	<div class="background">
-  <div class="transbox">
-    <p>Look at our sexiness.</p>
-  </div>
-</div>
-	</div>
-<div id="footer">
-	
-</div>
-</body>
+                .card:hover {
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25),
+                        0px 2px 10px rgba(0, 0, 0, 0.5);
+                }
+
+                .card a {
+                    color: #000;
+                }
+
+                .card img.pic {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 100px;
+                    -moz-border-radius: 100px;
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+                }
+
+                .card span.username {
+                    color: #999;
+                    font-size: 12pt;
+                }
+
+                .card .basic-info {
+                    padding: 15px;
+                }
+
+                .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+                    margin: 0;
+                }
+                </style>
+                <h1 style="text-align: center; font-size: 56pt;">Members</h1>
+                <h3><center>New to the club? Make a <a href="http://github.com" target="_blank">Github</a> account and ask us to add you to the organization!</center></h3>
+                <div id="loading"><center><p>Loading...</p><p><img src="img/ajax-loader.gif" /></center></div>
+                <div id="members" style="display:none;"></div>
+            </div>
+            <div id="background">
+            </div>
+        </div>
+        <script type="text/javascript" src="js/j.js"></script>
+        <script type="text/javascript" src="js/navigation.js"></script>
+        <script type="text/javascript">
+            // don't abuse my token pls
+            var token = "5ee8cb4409fe2df93d26f47204ea5d9fde5820e4";
+            $.ajax({
+                url: "https://api.github.com/orgs/shscsclub/members?filter=all",
+                dataType: "json",
+                type: "get",
+                headers: {
+                    Authorization: "token " + token,
+                },
+                success: function(users) {
+                    console.dir(users);
+                    var data = [];
+                    for(var i=0; i<users.length; i++) {
+                        (function(i) {
+                            $(document).queue("retrieve_users", function(n) {
+                                $.ajax({
+                                    url: "https://api.github.com/users/" + users[i].login,
+                                    dataType: "json",
+                                    type: "get",
+                                    headers: {
+                                        Authorization: "token " + token,
+                                    },
+                                    success: function(datum) {
+                                        data.push(datum);
+                                        n();
+                                    }
+                                });
+                            });
+                        })(i);
+                    }
+                    $(document).queue("retrieve_users", function() {
+                        console.dir(data);
+                        for(var i=0; i<data.length; i++) {
+                            var user = data[i];
+                            var card = document.createElement("div");
+                            card.className = "card";
+
+                            var table = document.createElement("table");
+                            var tr1 = document.createElement("tr1");
+
+                            var pic = document.createElement("td");
+                            pic.style.verticalAlign = "middle";
+                            pic.innerHTML = "<a href='http://github.com/" + user.login + "' target='_blank'><img class='pic' src='" + user.avatar_url + "' /></a>";
+                            tr1.appendChild(pic);
+
+                            var basic = document.createElement("td");
+                            basic.className = "basic-info";
+                            basic.style.verticalAlign = "top";
+                            if (user.name) {
+                                basic.innerHTML += "<a href='http://github.com/" + user.login + "' target='_blank'>"
+                                    + "<h1 class='name'>" + user.name + "<h1>"
+                                    + "<span class='username'>" + user.login + "</span>"
+                                    + "</a>";
+                            } else {
+                                basic.innerHTML += "<a href='http://github.com/" + user.login + "' target='_blank'>"
+                                    + "<h1 class='name'>" + user.login + "<h1>";
+                                    + "</a>";
+                            }
+
+                            if (user.blog) {
+                                basic.innerHTML += "<p><span class='octicon octicon-link'></span> <a href='" + user.blog + "' target='_blank'>" + user.blog + "</a></p>";
+                            }
+                            tr1.appendChild(basic);
+
+                            table.appendChild(tr1);
+                            card.appendChild(table);
+
+                            document.getElementById("members").appendChild(card);
+                            console.dir(card);
+                        }
+
+                        $("#loading").slideUp("fast", "swing", function() {
+                            $("#members").slideDown("fast", "swing");
+                        });
+                    });
+                    $(document).dequeue("retrieve_users");
+                }
+            });
+        </script>
+    </body>
+</html>

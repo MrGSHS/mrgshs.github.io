@@ -1,0 +1,84 @@
+<div id="navigation-import" role="navigation">
+	<style>
+		#navigation-bar {
+			width: 100%;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+
+			position: fixed;
+			top: 0px;
+			left: 0px;
+
+			background-color: rgba(0, 0, 0, 0.75);
+			color: #FFF;
+
+			padding: 0px 20%;
+		}
+
+		#navigation-table {
+			width: 100%;
+		}
+
+		#navigation-table, #navigation-table tr, #navigation-table td, #navigation-table tbody {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+
+		#navigation-bar .btn {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+
+			color: #FFF;
+			text-decoration: none;
+			padding: 15px 15px;
+
+			display: inline-block;
+			background-color: rgba(0, 0, 0, 0);
+
+			transition: .3s all ease-out;
+			-moz-transition: .3s all ease-out;
+			-webkit-transition: .3s all ease-out;
+		}
+
+		#navigation-bar .btn:hover {
+			background-color: rgba(0, 0, 0, 0.25);
+		}
+
+		#navigation-bar .btn:active {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		#navigation-table tr .right {
+			float: right;
+		}
+
+		#navigation-bar span.logo {
+			width: 25px;
+			height: 25px;
+			display: inline-block;
+
+			vertical-align: middle;
+			margin-right: 5px;
+
+			background-image: url(img/logo-light.png);
+			background-size: 100% 100%;
+			background-position: 0 0;
+		}
+	</style>
+	<div id="navigation-bar">
+		<table id="navigation-table">
+			<tr style="height: 100%;">
+				<td><a href="index.html" class="btn"><span class="logo"></span> Computer Science Club</a></td>
+				<td style="text-align: right;">
+					<a href="about.html" class="btn">About</a>
+					<a href="members.html" class="btn">Members</a>
+					<a href="javascript:void(0);" class="btn">Projects</a>
+					<a href="javascript:void(0);" class="btn">CTFs</a>
+					<a href="faq.html" class="btn">FAQ</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
