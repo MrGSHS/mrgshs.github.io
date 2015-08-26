@@ -42,6 +42,10 @@ body {
 	}
 }
 
+#panel #links {
+	font-size: 0.75em;
+}
+
 #panel a.link {
 	text-decoration: none;
 	color: #000;
