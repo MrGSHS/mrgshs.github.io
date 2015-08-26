@@ -42,8 +42,16 @@ body {
 	}
 }
 
-#panel #links {
-	font-size: 0.75em;
+@media only screen and (min-width : 320px) {
+	#panel #links a {
+		font-size: 0.85em;
+	}
+}
+
+@media only screen and (min-width : 768px) {
+	#panel #links a {
+		font-size: 1.35em;
+	}
 }
 
 #panel a.link {
