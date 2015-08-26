@@ -1,8 +1,13 @@
-@import url(//fonts.googleapis.com/css?family=Dosis:400,500,300);
+/* @import url(//fonts.googleapis.com/css?family=Dosis:400,500,300); */
+
+@font-face {
+	font-family: "Guild";
+	src: url(/fonts/guild.ttf) format("truetype");
+}
 
 body {
 	background-color: #F0F0F0;
-	font-family: "Dosis", sans-serif;
+	font-family: "Guild", sans-serif;
 }
 
 #panel {
