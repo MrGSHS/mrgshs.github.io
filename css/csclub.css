@@ -13,12 +13,33 @@ body {
 	transform: translateX(-50%) translateY(-50%);
 }
 
-#panel img#logo {
-	width: 75%;
+@media only screen and (min-width : 320px) {
+	#panel img#logo {
+		width: 100%;
+	}
 }
 
-#panel h3 {
-	font-size: 1.5em;
+@media only screen and (min-width : 768px) {
+	#panel img#logo {
+		width: 75%;
+	}
+}
+
+@media only screen and (min-width : 320px) {
+	#panel h3 {
+		font-size: 1.0em;
+	}
+}
+
+@media only screen and (min-width : 768px) {
+	#panel h3 {
+		font-size: 1.5em;
+	}
+}
+
+#panel a.link {
+	text-decoration: none;
+	color: #000;
 }
 
 #panel a.button {
