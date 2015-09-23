@@ -1,24 +1,99 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>&#60;/&#62; whatever</title>
+        <title>SHS Computer Science Club</title>
         <link rel="stylesheet" href="index.css" />
+        <script src="jquery.js" language="javascript"> </script>
         <script type="text/javascript">
         function magical() { mystery(); }
         function mystery () { tour (); }
-        function tour () { document.getElementById("logo").src="logo.svg"; }
+        function tour () { $('#logo').attr('src','logo.svg'); }
+
+        $(document).ready(function() {
+          //On window scroll adjust header appropriately.
+          fixed = false;
+          $(window).scroll(function () {
+            if ($(window).scrollTop() > 148) {
+              if (fixed) return;
+              fixed = true;
+              $('#header').addClass('header-fixed');
+              $('#header-fill').show();
+            } else {
+              if (!fixed) return;
+              fixed = false;
+              $('#header').removeClass('header-fixed');
+              $('#header-fill').hide();
+            }
+          });
+        });
         </script>
     </head>
     <body>
         <div id="header">
-            <img id="logo" src="csclub.png" height="128" onclick="magical()" >
+            <img id="logo" src="csclub.png" onclick="magical()" >
             <ul>
                 <li><a href="#">About</a></li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
+        <div id="header-fill"></div>
         <div id="body">
             amazing content
+            <ul>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <li>Test content to fill up space!</li>
+            <ul>
         </div>
     </body>
 </html>
